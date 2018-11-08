@@ -3,24 +3,23 @@ const assert = require('yeoman-assert');
 const helpers = require('yeoman-test');
 
 describe('generator-lit-element-next:app', () => {
-  beforeAll(() => {
+  beforeEach(() => {
     return helpers
-      .run(path.join(__dirname, '../generators/app'))
+      .run(path.join(__dirname, '../app'))
       .withPrompts({
         packageName: `${process.cwd().replace(/(?:.*\/)(.+)/i, '$1')}`,
         description: 'Yet another generator to disrupt the world',
-        homepage: 'https://github.com/awesome-tsnext',
-        repoUrl: 'git@github.com:cashblack/awesome-tsnext.git',
+        homepage: 'https://github.com/awesome-lit-element-next',
+        repoUrl: 'git@github.com:cashblack/awesome-lit-element-next.git',
         authorName: 'Cash Black',
         authorEmail: 'cash.black@gmail.com',
         authorUrl: 'cash-black.com',
         gitName: 'cashblack',
-      })
-      .toPromise();
+      });
   });
 
   it('creates files', () => {
-    assert.file([
+    const expected = [
       '.editorconfig',
       '.gitattributes',
       '.gitignore',
@@ -45,6 +44,9 @@ describe('generator-lit-element-next:app', () => {
       'src/test/my-element.spec.ts',
 
       'src/my-element.ts',
-    ]);
+    ];
+
+    assert.file(expected);
   });
+
 });

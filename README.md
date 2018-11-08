@@ -65,7 +65,7 @@ Then generate your new project:
 ```sh
 # Create a new directory if you haven't already.
 # Then change to that new directory.
-$ mkdir my-tsnext-app && cd my-tsnext-app
+$ mkdir my-app && cd my-app
 
 # Init
 $ yo lit-element-next
@@ -102,8 +102,8 @@ $ npx -p yo -p generator-lit-element-next -- yo lit-element-next
 [npx-url]: https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b
 [tslint-extension-url]: https://palantir.github.io/tslint/usage/third-party-tools
 [tslint-url]: https://palantir.github.io/tslint
-[typescript-url]: http://www.typescriptlang.org
-[yeoman-url]: http://yeoman.io
+[typescript-url]: https://www.typescriptlang.org
+[yeoman-url]: https://yeoman.io
 [lit-element-url]: https://github.com/Polymer/lit-element
 [rollup-url]: https://github.com/rollup/rollup
 
@@ -131,7 +131,7 @@ $ npx -p yo -p generator-lit-element-next -- yo lit-element-next
 [node-version-url]: https://nodejs.org/en/download
 [mit-license-url]: https://github.com/motss/generator-lit-element-next/blob/master/LICENSE
 
-[downloads-url]: http://www.npmtrends.com/generator-lit-element-next
+[downloads-url]: https://www.npmtrends.com/generator-lit-element-next
 [packagephobia-url]: https://packagephobia.now.sh/result?p=generator-lit-element-next
 
 [travis-url]: https://travis-ci.org/motss/generator-lit-element-next

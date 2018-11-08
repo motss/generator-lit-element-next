@@ -5,7 +5,7 @@
     "!**/node_modules/**",
     "!**/src/demo/**/*.{js|jsx}",
     "!**/src/test*/**/*.{js|jsx}",
-    "**/src/**/*.{js|jsx}"
+    "<rootDir>/app/index.js"
   ],
   "coverageDirectory": "./coverage",
   "coverageThreshold": {

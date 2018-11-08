@@ -27,20 +27,20 @@ function getDefault() {
         username: userName,
         homepage: ghUser.html_url,
       };
-    })
-    .catch(() => ({})); // Return empty object.
+    });
 }
 
 module.exports = class extends Generator {
   initializing() {
     this.user = {};
 
-    return getDefault().then(({name, email, username, homepage} = {}) => {
-      this.user.name = name || '';
-      this.user.email = email || '';
-      this.user.username = username || '';
-      this.user.homepage = homepage || '';
-    });
+    return getDefault()
+      .then(({name, email, username, homepage} = {}) => {
+        this.user.name = name || '';
+        this.user.email = email || '';
+        this.user.username = username || '';
+        this.user.homepage = homepage || '';
+      });
   }
 
   prompting() {
@@ -112,10 +112,10 @@ module.exports = class extends Generator {
   writing() {
     const NON_TPLS = [
       'src/my-element.ts',
-      'test/my-element.spec.ts',
-      'test/test-helpers.ts',
-      'test/index.html',
-      'test/runner.html',
+      'src/test/my-element.spec.ts',
+      'src/test/test-helpers.ts',
+      'src/test/index.html',
+      'src/test/runner.html',
       'CONTRIBUTORS',
       'tsconfig.test.json',
       'tsconfig.json',
