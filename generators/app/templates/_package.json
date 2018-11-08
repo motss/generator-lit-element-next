@@ -1,0 +1,66 @@
+{
+  "name": "<%= packageName %>",
+  "version": "0.0.0",
+  "private": true,
+  "description": "<%= description %>",
+  "keywords": [
+    "<%= packageName %>",
+    "lit-element",
+    "polymer",
+    "typescript"
+  ],
+  "homepage": "<%= homepage %>",
+  "repository": {
+    "type": "git",
+    "url": "<%= repoUrl %>"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "<%= authorName %>",
+    "email": "<%= authorEmail %>",
+    "url": "<%= authorUrl %>"
+  },
+  "files": [
+    "dist/my-element.js",
+    "dist/my-element.d.ts"
+  ],
+  "main": "./dist/my-element.js",
+  "module": "./dist/my-element.js",
+  "typings": "./dist/my-element.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.test.json",
+    "clean": "rm -rf ./*.*js ./*.d.ts dist/",
+    "lint": "tslint --project tsconfig.json --config tslint.prod.json --format stylish 'src/**/*.ts*'",
+    "lint:debug": "tslint --project tsconfig.json --config tslint.json --format stylish 'src/**/*.ts*'",
+    "prepublishOnly": "rm -rf dist/ && cross-env NODE_ENV=production rollup -c ./rollup.config.js",
+    "rollup": "rollup -c ./rollup.config.js",
+    "test": "npm run build && wct"
+  },
+  "dependencies": {
+    "@polymer/lit-element": "^0.6.2"
+  },
+  "devDependencies": {
+    "@messageflow/tslint-config": "^1.2.0",
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.5",
+    "cross-env": "^5.2.0",
+    "rollup": "^0.67.0",
+    "rollup-plugin-filesize": "^5.0.1",
+    "rollup-plugin-minify-html-literals": "^1.1.1",
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-terser": "^3.0.0",
+    "rollup-plugin-tslint": "^0.1.35",
+    "rollup-plugin-typescript": "^1.0.0",
+    "tslint": "^5.11.0",
+    "typescript": "^3.1.6",
+    "wct-browser-legacy": "^1.0.2",
+    "web-component-tester": "^6.9.0"
+  },
+  "engines": {
+    "node": ">= 10.13.0",
+    "npm": ">= 6.4.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

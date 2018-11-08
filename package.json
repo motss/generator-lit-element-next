@@ -1,0 +1,58 @@
+{
+  "name": "generator-lit-element-next",
+  "version": "0.0.0",
+  "description": "Generator for developing your next custom element with latest LitElement",
+  "keywords": [
+    "generator",
+    "generator-lit-element-next",
+    "lit-element",
+    "typescript",
+    "yeoman",
+    "yeoman-generator",
+    "yo"
+  ],
+  "homepage": "https://github.com/motss/generator-lit-element-next",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:motss/generator-lit-element-next.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Rong Sen Ng (motss)",
+    "email": "wes.ngrongsen@gmail.com",
+    "url": "https://github.com/motss"
+  },
+  "files": [
+    "generators"
+  ],
+  "main": "./generators/index",
+  "scripts": {
+    "clean": "rm -rf ./*.*js ./*.d.ts dist/",
+    "test": "jest --config ./.jestrc.json"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "execa": "^1.0.0",
+    "gh-user": "^4.0.0",
+    "git-remote-origin-url": "^2.0.0",
+    "github-username": "^4.1.0",
+    "gulp-install": "^1.1.0",
+    "gulp-template": "^5.0.0",
+    "minimist": "^1.2.0",
+    "yeoman-generator": "^3.1.1",
+    "yosay": "^2.0.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "jest": "^23.6.0",
+    "yeoman-assert": "^3.1.1",
+    "yeoman-test": "^1.9.1"
+  },
+  "engines": {
+    "node": ">= 10.13.0",
+    "npm": ">= 6.4.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

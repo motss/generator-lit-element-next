@@ -1,0 +1,24 @@
+{
+  "bail": true,
+  "collectCoverage": true,
+  "collectCoverageFrom": [
+    "!**/node_modules/**",
+    "!**/src/demo/**/*.{js|jsx}",
+    "!**/src/test*/**/*.{js|jsx}",
+    "**/src/**/*.{js|jsx}"
+  ],
+  "coverageDirectory": "./coverage",
+  "coverageThreshold": {
+    "global": {
+      "branches": 80,
+      "functions": 80,
+      "lines": 80,
+      "statements": 80
+    }
+  },
+  "testEnvironment": "node",
+  "testMatch": [
+    "<rootDir>/__tests__/**/*.spec.js?(x)"
+  ],
+  "verbose": true
+}

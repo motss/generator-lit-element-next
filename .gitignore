@@ -1,0 +1,20 @@
+# .gitignore 101 - https://www.quora.com/Does-gitignore-file-only-work-on-current-folder
+
+# dot files
+.*cache
+.build/
+.DS_Store
+.nyc_output
+.tmp/
+.vscode
+*.env
+
+# debug
+*debug.log*
+
+# folders
+coverage*/
+dist*/
+node_modules/
+
+# Do not ignore

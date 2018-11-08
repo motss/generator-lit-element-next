@@ -1,0 +1,8 @@
+{
+  "extends": [
+    "@messageflow/tslint-config"
+  ],
+  "rules": {
+    "no-debugger": true
+  }
+}
