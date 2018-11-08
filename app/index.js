@@ -27,7 +27,8 @@ function getDefault() {
         username: userName,
         homepage: ghUser.html_url,
       };
-    });
+    })
+    .catch(() => ({})); // Return empty object
 }
 
 module.exports = class extends Generator {
