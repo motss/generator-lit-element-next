@@ -1,6 +1,6 @@
 {
   "name": "generator-lit-element-next",
-  "version": "1.0.3-alpha.1",
+  "version": "1.0.3",
   "description": "Generator for developing your next custom element with latest LitElement",
   "keywords": [
     "generator",
