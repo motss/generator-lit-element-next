@@ -1,31 +1,17 @@
-jest.mock('execa', () => jest.fn().mockImplementation((_, confArgs) => {
-  const [,,name] = confArgs;
-  const val = name === 'user.name' ? 'Cash Black' : 'cash.black@gmail.com';
-
-  return Promise.resolve(val);
-}));
-
-jest.mock('github-username', () => jest.fn().mockImplementation(() => {
-  return Promise.resolve('cashblack');
-}));
-
 jest.mock('gh-user', () => jest.fn().mockImplementation(() => {
-  return Promise.resolve({
-    html_url: 'https://github.com/cashblack',
-  });
+  return Promise.reject({});
 }));
 
 const path = require('path');
 const assert = require('yeoman-assert');
 const helpers = require('yeoman-test');
 
-describe('mock Github info', () => {
+describe(`Github info and 'docDescription' are missing`, () => {
   beforeEach(() => {
     return helpers
       .run(path.join(__dirname, '../app'))
       .withPrompts({
         packageName: `${process.cwd().replace(/(?:.*\/)(.+)/i, '$1')}`,
-        description: 'Yet another generator to disrupt the world',
         homepage: 'https://github.com/awesome-lit-element-next',
         repoUrl: 'git@github.com:cashblack/awesome-lit-element-next.git',
         authorName: 'Cash Black',

@@ -1,47 +1,25 @@
 const Generator = require('yeoman-generator');
 const chalk = require('chalk');
 const yosay = require('yosay');
-const execa = require('execa');
-const githubUsername = require('github-username');
 const ghUser = require('gh-user');
-
-function getDefault() {
-  const getUserName = execa('git', ['config', '--get', 'user.name']);
-  const getUserEmail = execa('git', ['config', '--get', 'user.email']);
-
-  return Promise.all([getUserName.then((r) => r.stdout), getUserEmail.then((r) => r.stdout)])
-    .then(([userName, userEmail]) => {
-      return githubUsername(userEmail).then((username) => {
-        return Promise.all([
-          userName,
-          userEmail,
-          username,
-          userEmail ? ghUser(username) : Promise.resolve({}),
-        ]);
-      });
-    })
-    .then(([name, email, userName, ghUser]) => {
-      return {
-        name,
-        email,
-        username: userName,
-        homepage: ghUser.html_url,
-      };
-    })
-    .catch(() => ({})); // Return empty object
-}
 
 module.exports = class extends Generator {
   initializing() {
-    this.user = {};
+    const ghTask = this.user.github.username()
+      .then(un => Promise.all([un, ghUser(un)]))
+      .then(([un, info]) => {
+        return [un, info.html_url];
+      })
+      .catch(() => []);
 
-    return getDefault()
-      .then(({name, email, username, homepage} = {}) => {
-        this.user.name = name || '';
-        this.user.email = email || '';
-        this.user.username = username || '';
-        this.user.homepage = homepage || '';
-      });
+    return ghTask.then(([ username, homepage ]) => {
+      this.user.info = {
+        name: this.user.git.name(),
+        email: this.user.git.email(),
+        username,
+        homepage,
+      };
+    });
   }
 
   prompting() {
@@ -78,34 +56,32 @@ module.exports = class extends Generator {
         type: 'input',
         name: 'authorName',
         message: 'Author\'s Name',
-        default: this.user.name,
+        default: this.user.info.name,
       },
       {
         type: 'input',
         name: 'authorEmail',
         message: 'Author\'s email',
-        default: this.user.email,
+        default: this.user.info.email,
       },
       {
         type: 'input',
         name: 'authorUrl',
         message: 'Author\'s homepage',
-        default: this.user.homepage,
+        default: this.user.info.homepage,
       },
       {
         type: 'input',
         name: 'gitName',
         message: 'Github username or organization',
-        default: this.user.username,
+        default: this.user.info.username,
       },
     ];
 
     return this.prompt(prompts).then((props) => {
       this.props = Object.assign({}, props, {
         docDescription: (props.description || fallbackDescription).replace(
-          /typeScript/i,
-          '[TypeScript][typescript-url]'
-        ),
+          /typeScript/i, '[TypeScript][typescript-url]'),
       });
     });
   }
@@ -140,16 +116,14 @@ module.exports = class extends Generator {
       return this.fs.copy(
         this.templatePath(n),
         this.destinationPath(n),
-        this.props
-      );
+        this.props);
     });
 
     TPLS.map((n) => {
       return this.fs.copyTpl(
         this.templatePath(n),
         this.destinationPath(n.replace(/(_)/gi, '')),
-        this.props
-      );
+        this.props);
     });
   }
 
@@ -159,10 +133,7 @@ module.exports = class extends Generator {
       npm: true,
       callback: () => {
         this.log(
-          `✨  Your ${chalk.green(
-            this.props.packageName
-          )} is ready! Web Components rocks! 🤘`
-        );
+          `✨  Your ${chalk.green(this.props.packageName)} is ready! Web Components rocks! 🤘`);
       },
     });
   }
