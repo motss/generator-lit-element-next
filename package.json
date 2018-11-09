@@ -23,7 +23,7 @@
     "url": "https://github.com/motss"
   },
   "files": [
-    "generators"
+    "app"
   ],
   "main": "./generators/index",
   "scripts": {
