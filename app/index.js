@@ -27,7 +27,7 @@ module.exports = class extends Generator {
     this.log(yosay(`Welcome to the stunning ${chalk.red(process.env.npm_package_name)}!`));
 
     const fallbackDescription =
-      'Developing your custom element with TypeScript and LitElement';
+      'A simple custom element written in TypeScript with LitElement';
     const prompts = [
       {
         type: 'input',
@@ -131,10 +131,6 @@ module.exports = class extends Generator {
     this.installDependencies({
       bower: false,
       npm: true,
-      callback: () => {
-        this.log(
-          `✨  Your ${chalk.green(this.props.packageName)} is ready! Web Components rocks! 🤘`);
-      },
     });
   }
 };

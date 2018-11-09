@@ -12,8 +12,8 @@ describe(`Github info and 'docDescription' are missing`, () => {
       .run(path.join(__dirname, '../app'))
       .withPrompts({
         packageName: `${process.cwd().replace(/(?:.*\/)(.+)/i, '$1')}`,
-        homepage: 'https://github.com/awesome-lit-element-next',
-        repoUrl: 'git@github.com:cashblack/awesome-lit-element-next.git',
+        homepage: 'https://github.com/awesome-next',
+        repoUrl: 'git@github.com:cashblack/awesome-next.git',
         authorName: 'Cash Black',
         authorEmail: 'cash.black@gmail.com',
         authorUrl: 'cash-black.com',

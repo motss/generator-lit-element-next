@@ -30,7 +30,7 @@ jobs:
           name: Install latest NPM
           command: npm i -g npm@latest --quiet
       - run:
-          name: Clean install dependencies then run test
+          name: Clean install dependencies then run tests
           command: npm cit --quiet
       - save_cache:
           key: v{{ .Environment.CIRCLE_BUILD_NUM }}-npm-lock-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_JOB }}-{{ checksum "package-lock.json" }}

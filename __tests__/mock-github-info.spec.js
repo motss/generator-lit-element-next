@@ -25,15 +25,15 @@ const path = require('path');
 const assert = require('yeoman-assert');
 const helpers = require('yeoman-test');
 
-describe(`Github info and 'docDescription' are missing`, () => {
+describe(`mock Github info`, () => {
   beforeEach(() => {
     return helpers
       .run(path.join(__dirname, '../app'))
       .withPrompts({
         packageName: `${process.cwd().replace(/(?:.*\/)(.+)/i, '$1')}`,
         description: 'Yet another generator to disrupt the world',
-        homepage: 'https://github.com/awesome-lit-element-next',
-        repoUrl: 'git@github.com:cashblack/awesome-lit-element-next.git',
+        homepage: 'https://github.com/awesome-next',
+        repoUrl: 'git@github.com:cashblack/awesome-next.git',
         authorName: 'Cash Black',
         authorEmail: 'cash.black@gmail.com',
         authorUrl: 'cash-black.com',

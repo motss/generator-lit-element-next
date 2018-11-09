@@ -9,8 +9,8 @@ describe('normal', () => {
       .withPrompts({
         packageName: `${process.cwd().replace(/(?:.*\/)(.+)/i, '$1')}`,
         description: 'Yet another generator to disrupt the world',
-        homepage: 'https://github.com/awesome-lit-element-next',
-        repoUrl: 'git@github.com:cashblack/awesome-lit-element-next.git',
+        homepage: 'https://github.com/awesome-next',
+        repoUrl: 'git@github.com:cashblack/awesome-next.git',
         authorName: 'Cash Black',
         authorEmail: 'cash.black@gmail.com',
         authorUrl: 'cash-black.com',
