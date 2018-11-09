@@ -12,7 +12,7 @@ const rollup = {
   input: 'src/my-element.ts',
   output: [{
     file: 'dist/my-element.js',
-    format: 'es',
+    format: 'esm',
   }],
   plugins: [
     resolve(),
