@@ -37,7 +37,7 @@
     "test": "npm run build && wct"
   },
   "dependencies": {
-    "@polymer/lit-element": "^0.6.2"
+    "@polymer/lit-element": "^0.6.3"
   },
   "devDependencies": {
     "@messageflow/tslint-config": "^1.2.0",
