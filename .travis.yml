@@ -12,7 +12,8 @@ before_script:
   - npm i -g npm@latest --quiet
   - npm i codecov coveralls --quiet
 script:
-  - npm cit --quiet
+  - npm i --quiet
+  - npm t
 after_success:
   - 'cat ./coverage/lcov.info | coveralls'
   - 'cat ./coverage/lcov.info | codecov'
