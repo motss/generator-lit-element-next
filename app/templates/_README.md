@@ -38,6 +38,7 @@
 
 ## Pre-requisites
 
+- [Java 8][java-url] _(`web-component-tester` works without any issue with Java 8)_
 - [Node.js][nodejs-url] >= 10.13.0
 - [NPM][npm-url] >= 6.4.1 ([NPM][npm-url] comes with [Node.js][nodejs-url], no separate installation is required.)
 - (Optional for non-[VS Code][vscode-url] users) [Syntax Highlighting for lit-html in VS Code][vscode-lit-html-url]
@@ -90,10 +91,11 @@ class MainApp extends LitElement {
 
 <!-- References -->
 [typescript-url]: https://github.com/Microsoft/TypeScript
+[java-url]: https://www.java.com/en/download
 [nodejs-url]: https://nodejs.org
 [npm-url]: https://www.npmjs.com
 [node-releases-url]: https://nodejs.org/en/download/releases
-[vscode-url]: https://code.visualstudio.com/
+[vscode-url]: https://code.visualstudio.com
 [vscode-lit-html-url]: https://github.com/mjbvz/vscode-lit-html
 
 <!-- MDN -->
