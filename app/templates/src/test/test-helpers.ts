@@ -12,15 +12,16 @@ interface ShadyDOM {
   inUse: boolean;
 }
 
-interface Window2 extends Window {
-  ShadyCSS?: ShadyCSS;
-  ShadyDOM?: ShadyDOM;
+declare global {
+  interface Window {
+    ShadyCSS?: ShadyCSS;
+    ShadyDOM?: ShadyDOM;
+    ShadowRoot: new() => ShadowRoot;
+  }
 }
 
 /** Allows code to check `instanceof ShadowRoot`. */
-declare interface ShadowRootConstructor {
-  new(): ShadowRoot;
-}
+declare type ShadowRootConstructor = new() => ShadowRoot;
 export declare const ShadowRoot: ShadowRootConstructor;
 
 export const stripExpressionDelimiters = (html: string) => html.replace(/<!---->/g, '');
@@ -28,6 +29,11 @@ export const stripExpressionDelimiters = (html: string) => html.replace(/<!---->
 export const nextFrame = () => new Promise(yay => window.requestAnimationFrame(yay));
 
 export const getComputedStyleValue = (element: Element, property: string) =>
-  (window as Window2).ShadyCSS
-    ? (window as Window2)!.ShadyCSS!.getComputedStyleValue(element, property)
+  window.ShadyCSS
+    ? window.ShadyCSS!.getComputedStyleValue(element, property)
     : window.getComputedStyle(element).getPropertyValue(property);
+
+export const getShadowInnerHTML = (target: Element | HTMLElement) => {
+  const root = (target.shadowRoot || target);
+  return root.innerHTML && stripExpressionDelimiters(root.innerHTML!);
+};

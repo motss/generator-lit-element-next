@@ -1,14 +1,14 @@
-import { LitElement } from '@polymer/lit-element';
+import { MyElement } from '../my-element.js';
 
 import '../my-element.js';
-import { stripExpressionDelimiters } from './test-helpers';
+import { getShadowInnerHTML } from './test-helpers';
 
 const assert = chai.assert;
-let element: LitElement;
+let element: MyElement;
 
 describe('my-element', () => {
   beforeEach(() => {
-    element = document.createElement('my-element') as LitElement;
+    element = document.createElement('my-element') as MyElement;
     document.body.appendChild(element);
   });
 
@@ -20,13 +20,13 @@ describe('my-element', () => {
     await element.updateComplete;
 
     const h1El = element.shadowRoot!.querySelector('h1')!;
-    assert.strictEqual(stripExpressionDelimiters(h1El.innerHTML), 'Hello, World!');
+    assert.strictEqual(getShadowInnerHTML(h1El), 'Hello, World!');
   });
 
   it(`has property 'name=Hello, World!'`, async () => {
     await element.updateComplete;
 
-    assert.strictEqual((element as any).name, 'Hello, World!');
+    assert.strictEqual(element.name, 'Hello, World!');
   });
 
 });

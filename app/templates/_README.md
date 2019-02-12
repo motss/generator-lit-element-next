@@ -39,7 +39,7 @@
 ## Pre-requisites
 
 - [Java 8][java-url] _(`web-component-tester` works without any issue with Java 8)_
-- [Node.js][nodejs-url] >= 10.13.0
+- [Node.js][nodejs-url] >= 10.15.1
 - [NPM][npm-url] >= 6.4.1 ([NPM][npm-url] comes with [Node.js][nodejs-url], no separate installation is required.)
 - (Optional for non-[VS Code][vscode-url] users) [Syntax Highlighting for lit-html in VS Code][vscode-lit-html-url]
 
@@ -52,7 +52,7 @@ $ npm install <%= packageName %>
 
 ## Usage
 
-### HTML (w/ native ES modules)
+### HTML (with native ES modules)
 
 ```html
 <!-- For the sake of brevity, the HTML below is just for reference -->
@@ -73,13 +73,25 @@ $ npm install <%= packageName %>
 ### JS/ TS file (w/ native ES modules)
 
 ```ts
-import { html, LitElement } from '@polymer/lit-element';
+import { css, html, LitElement } from 'lit-element';
 import '<%= packageName %>.js';
 
 class MainApp extends LitElement {
+  public static styles = [
+    css`
+    :host {
+      display: block;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+    `,
+  ];
+
   protected render() {
     return html`
-      <my-element></my-element>
+    <my-element></my-element>
     `;
   }
 }

@@ -43,11 +43,8 @@
 
 Please make sure that you have the following dependencies installed and setup correctly:-
 
-- [Node.js][nodejs-url] >= `10.13.0`
+- [Node.js][nodejs-url] >= `10.15.1`
 - [NPM][npm-url] >= `6.4.1` ___(The minimum NPM version for [node:dubnium][node-releases-url])___
-- [TypeScript][typescript-url] >= `3.1.6` ___(No guarantee it will work below the version specified here)___
-- [TSLint][tslint-url] >= `5.11.0` ___(No guarantee it will work below the version specified here)___
-- [TSLint extension for your favorite text editor][tslint-extension-url]
 
 ### Installation
 

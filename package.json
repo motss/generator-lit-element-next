@@ -31,7 +31,7 @@
     "test": "jest --config ./.jestrc.json"
   },
   "dependencies": {
-    "chalk": "^2.4.1",
+    "chalk": "^2.4.2",
     "gh-user": "^4.0.0",
     "yeoman-generator": "^3.1.1",
     "yosay": "^2.0.2"
@@ -42,7 +42,7 @@
     "yeoman-test": "^1.9.1"
   },
   "engines": {
-    "node": ">= 10.13.0",
+    "node": ">= 10.15.1",
     "npm": ">= 6.4.1"
   },
   "publishConfig": {
