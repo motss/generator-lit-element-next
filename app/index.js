@@ -2,6 +2,7 @@ const Generator = require('yeoman-generator');
 const chalk = require('chalk');
 const yosay = require('yosay');
 const ghUser = require('gh-user');
+const pkgJson = require('../package.json');
 
 module.exports = class extends Generator {
   initializing() {
@@ -24,7 +25,7 @@ module.exports = class extends Generator {
 
   prompting() {
     // Have Yeoman greet the user.
-    this.log(yosay(`Welcome to the stunning ${chalk.red(process.env.npm_package_name)}!`));
+    this.log(yosay(`Welcome to the stunning ${chalk.red(pkgJson.name)}!`));
 
     const fallbackDescription =
       'A simple custom element written in TypeScript with LitElement';
