@@ -20,7 +20,7 @@ before_script:
 script:
   - xvfb-run npm run test
   - if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then
-      npm run test:ci --
+      npm run test --
         -s 'windows 7/internet explorer@11'
         -s 'windows 10/microsoftedge@18'
         -s 'windows 10/microsoftedge@17'
