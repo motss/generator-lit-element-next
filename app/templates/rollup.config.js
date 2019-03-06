@@ -5,7 +5,7 @@ import filesize from 'rollup-plugin-filesize';
 import literals from 'rollup-plugin-minify-html-literals';
 import resolve from 'rollup-plugin-node-resolve';
 import tslint from 'rollup-plugin-tslint';
-import typescript from 'rollup-plugin-typescript';
+import typescript from 'rollup-plugin-typescript2';
 
 const isProd = !process.env.ROLLUP_WATCH;
 const rollup = {
