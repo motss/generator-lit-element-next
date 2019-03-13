@@ -51,14 +51,13 @@
     "rollup-plugin-node-resolve": "^4.0.0",
     "rollup-plugin-terser": "^4.0.4",
     "rollup-plugin-tslint": "^0.2.2",
-    "rollup-plugin-typescript2": "^0.19.2",
+    "rollup-plugin-typescript2": "^0.20.1",
     "@webcomponents/webcomponentsjs": "^2.2.7",
     "chai": "^4.2.0",
     "mocha": "^5.2.0",
     "tslint": "^5.12.1",
     "typescript": "^3.3.3",
-    "wct-mocha": "^1.0.0",
-    "web-component-tester": "^6.9.2"
+    "wct-mocha": "^1.0.0"
   },
   "engines": {
     "node": ">= 10.15.1",
