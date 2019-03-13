@@ -26,12 +26,12 @@
 
 > Write your next custom element with latest [lit-element][lit-element-url] in [TypeScript][typescript-url] while [Rollup][rollup-url] takes care the rest for you in code compilation and bundling.
 
-## Table of contents
+## Table of contents <!-- omit in toc -->
 
-- [Table of contents](#table-of-contents)
 - [Setup](#setup)
   - [Pre-requisites](#pre-requisites)
   - [Installation](#installation)
+    - [web-component-tester](#web-component-tester)
     - [NPM](#npm)
     - [NPX](#npx)
 - [Getting To Know Yeoman](#getting-to-know-yeoman)
@@ -45,8 +45,17 @@ Please make sure that you have the following dependencies installed and setup co
 
 - [Node.js][nodejs-url] >= `10.15.1`
 - [NPM][npm-url] >= `6.4.1` ___(The minimum NPM version for [node:dubnium][node-releases-url])___
+- [web-component-tester][web-component-tester-url] >= 6.9.2 (See [web-component-tester section][web-component-tester-section-url] for more details.)
 
 ### Installation
+
+#### web-component-tester
+
+For running tests, it's recommended to install globally on your system due to its insanely huge install size by running:
+
+```sh
+$ npm i -g web-component-tester
+```
 
 #### NPM
 
@@ -103,6 +112,8 @@ $ npx -p yo -p generator-lit-element-next -- yo lit-element-next
 [yeoman-url]: https://yeoman.io
 [lit-element-url]: https://github.com/Polymer/lit-element
 [rollup-url]: https://github.com/rollup/rollup
+[web-component-tester-url]: https://github.com/Polymer/tools/tree/master/packages/web-component-tester
+[web-component-tester-section-url]: #web-component-tester
 
 <!-- Badges -->
 [version-badge]: https://flat.badgen.net/npm/v/generator-lit-element-next

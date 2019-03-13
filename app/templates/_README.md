@@ -26,13 +26,12 @@
 
 > Better element for the web
 
-## Table of contents
+## Table of contents <!-- omit in toc -->
 
-- [Table of contents](#table-of-contents)
 - [Pre-requisites](#pre-requisites)
 - [Installation](#installation)
 - [Usage](#usage)
-  - [HTML (w/ native ES modules)](#html-w-native-es-modules)
+  - [HTML (with native ES modules)](#html-with-native-es-modules)
   - [JS/ TS file (w/ native ES modules)](#js-ts-file-w-native-es-modules)
 - [License](#license)
 
@@ -42,6 +41,7 @@
 - [Node.js][nodejs-url] >= 10.15.1
 - [NPM][npm-url] >= 6.4.1 ([NPM][npm-url] comes with [Node.js][nodejs-url], no separate installation is required.)
 - (Optional for non-[VS Code][vscode-url] users) [Syntax Highlighting for lit-html in VS Code][vscode-lit-html-url]
+- [web-component-tester][web-component-tester-url] >= 6.9.2 (For running tests, it's recommended to install globally on your system due to its insanely huge install size by running `npm i -g web-component-tester`.)
 
 ## Installation
 
@@ -109,6 +109,7 @@ class MainApp extends LitElement {
 [node-releases-url]: https://nodejs.org/en/download/releases
 [vscode-url]: https://code.visualstudio.com
 [vscode-lit-html-url]: https://github.com/mjbvz/vscode-lit-html
+[web-component-tester-url]: https://github.com/Polymer/tools/tree/master/packages/web-component-tester
 
 <!-- MDN -->
 [array-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
