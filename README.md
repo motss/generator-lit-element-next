@@ -14,7 +14,6 @@
 [![Total downloads][total-downloads-badge]][downloads-url]
 [![Packagephobia][packagephobia-badge]][packagephobia-url]
 
-[![Build Status][travis-badge]][travis-url]
 [![CircleCI][circleci-badge]][circleci-url]
 [![Dependency Status][daviddm-badge]][daviddm-url]
 [![codecov][codecov-badge]][codecov-url]
@@ -124,7 +123,6 @@ $ npx -p yo -p generator-lit-element-next -- yo lit-element-next
 [total-downloads-badge]: https://flat.badgen.net/npm/dt/generator-lit-element-next?label=total%20downloads
 [packagephobia-badge]: https://flat.badgen.net/packagephobia/install/generator-lit-element-next
 
-[travis-badge]: https://flat.badgen.net/travis/motss/generator-lit-element-next
 [circleci-badge]: https://flat.badgen.net/circleci/github/motss/generator-lit-element-next
 [daviddm-badge]: https://flat.badgen.net/david/dep/motss/generator-lit-element-next
 [codecov-badge]: https://flat.badgen.net/codecov/c/github/motss/generator-lit-element-next?label=codecov
@@ -142,7 +140,6 @@ $ npx -p yo -p generator-lit-element-next -- yo lit-element-next
 [downloads-url]: https://www.npmtrends.com/generator-lit-element-next
 [packagephobia-url]: https://packagephobia.now.sh/result?p=generator-lit-element-next
 
-[travis-url]: https://travis-ci.org/motss/generator-lit-element-next
 [circleci-url]: https://circleci.com/gh/motss/generator-lit-element-next/tree/master
 [daviddm-url]: https://david-dm.org/motss/generator-lit-element-next
 [coveralls-url]: https://coveralls.io/github/motss/generator-lit-element-next?branch=master
