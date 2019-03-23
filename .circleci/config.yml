@@ -39,6 +39,7 @@ jobs:
           when: on_success
           command: |
             ls -halt
+            ls -halt ./coverage
             # 'cat ./coverage/lcov.info | coveralls'
             # 'cat ./coverage/lcov.info | codecov'
       - save_cache:
