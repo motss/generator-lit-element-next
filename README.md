@@ -6,6 +6,8 @@
 
 <hr />
 
+[![Follow me][follow-me-badge]][follow-me-url]
+
 [![Version][version-badge]][version-url]
 [![Node version][node-version-badge]][node-version-url]
 [![MIT License][mit-license-badge]][mit-license-url]
@@ -115,7 +117,9 @@ $ npx -p yo -p generator-lit-element-next -- yo lit-element-next
 [web-component-tester-section-url]: #web-component-tester
 
 <!-- Badges -->
-[version-badge]: https://flat.badgen.net/npm/v/generator-lit-element-next
+[follow-me-badge]: https://flat.badgen.net/twitter/follow/igarshmyb?icon=twitter
+
+[version-badge]: https://flat.badgen.net/npm/v/generator-lit-element-next?icon=npm
 [node-version-badge]: https://flat.badgen.net/npm/node/generator-lit-element-next
 [mit-license-badge]: https://flat.badgen.net/npm/license/generator-lit-element-next
 
@@ -123,9 +127,9 @@ $ npx -p yo -p generator-lit-element-next -- yo lit-element-next
 [total-downloads-badge]: https://flat.badgen.net/npm/dt/generator-lit-element-next?label=total%20downloads
 [packagephobia-badge]: https://flat.badgen.net/packagephobia/install/generator-lit-element-next
 
-[circleci-badge]: https://flat.badgen.net/circleci/github/motss/generator-lit-element-next
+[circleci-badge]: https://flat.badgen.net/circleci/github/motss/generator-lit-element-next?icon=circleci
 [daviddm-badge]: https://flat.badgen.net/david/dep/motss/generator-lit-element-next
-[codecov-badge]: https://flat.badgen.net/codecov/c/github/motss/generator-lit-element-next?label=codecov
+[codecov-badge]: https://flat.badgen.net/codecov/c/github/motss/generator-lit-element-next?label=codecov&icon=codecov
 [coveralls-badge]: https://flat.badgen.net/coveralls/c/github/motss/generator-lit-element-next?label=coveralls
 
 [codebeat-badge]: https://codebeat.co/badges/2e98378b-4e11-497e-a692-ba66a4d1c71a?style=flat-square
@@ -133,6 +137,8 @@ $ npx -p yo -p generator-lit-element-next -- yo lit-element-next
 [coc-badge]: https://flat.badgen.net/badge/code%20of/conduct/pink
 
 <!-- Links -->
+[follow-me-url]: https://twitter.com/igarshmyb?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=motss/generator-lit-element-next
+
 [version-url]: https://www.npmjs.com/package/generator-lit-element-next
 [node-version-url]: https://nodejs.org/en/download
 [mit-license-url]: https://github.com/motss/generator-lit-element-next/blob/master/LICENSE

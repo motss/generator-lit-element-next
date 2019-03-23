@@ -6,6 +6,8 @@
 
 <hr />
 
+<!-- [![Follow me][follow-me-badge]][follow-me-url] -->
+
 [![Version][version-badge]][version-url]
 [![Built with lit-element][built-with-lit-element-badge]][built-with-lit-element-url]
 [![MIT License][mit-license-badge]][mit-license-url]
@@ -124,8 +126,12 @@ class MainApp extends LitElement {
 [string-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
 
 <!-- Badges -->
-[version-badge]: https://flat.badgen.net/npm/v/<%= packageName %>
-[built-with-lit-element-badge]: https://flat.badgen.net/badge/built%20with%20lit-element/v0.6.2/orange?icon=npm
+<!-- [follow-me-badge]: https://flat.badgen.net/twitter/follow/<%= authorName %>?icon=twitter -->
+
+
+
+[version-badge]: https://flat.badgen.net/npm/v/<%= packageName %>?icon=npm
+[built-with-lit-element-badge]: https://flat.badgen.net/npm/v/lit-element/latest?icon=npm&label=lit-element
 [mit-license-badge]: https://flat.badgen.net/npm/license/<%= packageName %>
 
 [downloads-badge]: https://flat.badgen.net/npm/dm/<%= packageName %>
@@ -133,31 +139,33 @@ class MainApp extends LitElement {
 [packagephobia-badge]: https://flat.badgen.net/packagephobia/install/<%= packageName %>
 [bundlephobia-badge]: https://flat.badgen.net/bundlephobia/minzip/<%= packageName %>
 
-[travis-badge]: https://flat.badgen.net/travis/motss/<%= packageName %>
-<!-- [circleci-badge]: https://flat.badgen.net/circleci/github/motss/<%= packageName %> -->
-[daviddm-badge]: https://flat.badgen.net/david/dep/motss/<%= packageName %>
-<!-- [codecov-badge]: https://flat.badgen.net/codecov/c/github/motss/<%= packageName %>?label=codecov -->
-<!-- [coveralls-badge]: https://flat.badgen.net/coveralls/c/github/motss/<%= packageName %>?label=coveralls -->
+[travis-badge]: https://flat.badgen.net/travis/<%= gitName %>/<%= packageName %>?icon=travis
+<!-- [circleci-badge]: https://flat.badgen.net/circleci/github/<%= gitName %>/<%= packageName %>?icon=circleci -->
+[daviddm-badge]: https://flat.badgen.net/david/dep/<%= gitName %>/<%= packageName %>
+<!-- [codecov-badge]: https://flat.badgen.net/codecov/c/github/<%= gitName %>/<%= packageName %>?label=codecov&icon=codecov -->
+<!-- [coveralls-badge]: https://flat.badgen.net/coveralls/c/github/<%= gitName %>/<%= packageName %>?label=coveralls -->
 
 [codebeat-badge]: https://codebeat.co/badges/123
 [codacy-badge]: https://api.codacy.com/project/badge/Grade/123
 [coc-badge]: https://flat.badgen.net/badge/code%20of/conduct/pink
 
 <!-- Links -->
+<!-- [follow-me-url]: https://twitter.com/<%= authorName %>?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=<%= packageName %> -->
+
 [version-url]: https://www.npmjs.com/package/<%= packageName %>
 [built-with-lit-element-url]: https://github.com/Polymer/lit-element
-[mit-license-url]: https://github.com/motss/<%= packageName %>/blob/master/LICENSE
+[mit-license-url]: https://github.com/<%= gitName %>/<%= packageName %>/blob/master/LICENSE
 
 [downloads-url]: https://www.npmtrends.com/<%= packageName %>
 [packagephobia-url]: https://packagephobia.now.sh/result?p=<%= packageName %>
 [bundlephobia-url]: https://bundlephobia.com/result?p=<%= packageName %>
 
-[travis-url]: https://travis-ci.org/motss/<%= packageName %>
-<!-- [circleci-url]: https://circleci.com/gh/motss/<%= packageName %>/tree/master -->
-[daviddm-url]: https://david-dm.org/motss/<%= packageName %>
-<!-- [codecov-url]: https://codecov.io/gh/motss/<%= packageName %> -->
-<!-- [coveralls-url]: https://coveralls.io/github/motss/<%= packageName %>?branch=master -->
+[travis-url]: https://travis-ci.org/<%= gitName %>/<%= packageName %>
+<!-- [circleci-url]: https://circleci.com/gh/<%= gitName %>/<%= packageName %>/tree/master -->
+[daviddm-url]: https://david-dm.org/<%= gitName %>/<%= packageName %>
+<!-- [codecov-url]: https://codecov.io/gh/<%= gitName %>/<%= packageName %> -->
+<!-- [coveralls-url]: https://coveralls.io/github/<%= gitName %>/<%= packageName %>?branch=master -->
 
-[codebeat-url]: https://codebeat.co/projects/github-com-motss-<%= packageName %>-master
-[codacy-url]: https://www.codacy.com/app/motss/<%= packageName %>?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=motss/<%= packageName %>&amp;utm_campaign=Badge_Grade
-[coc-url]: https://github.com/motss/<%= packageName %>/blob/master/CODE_OF_CONDUCT.md
+[codebeat-url]: https://codebeat.co/projects/github-com-<%= gitName %>-<%= packageName %>-master
+[codacy-url]: https://www.codacy.com/app/<%= gitName %>/<%= packageName %>?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=<%= gitName %>/<%= packageName %>&amp;utm_campaign=Badge_Grade
+[coc-url]: https://github.com/<%= gitName %>/<%= packageName %>/blob/master/CODE_OF_CONDUCT.md
