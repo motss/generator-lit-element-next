@@ -40,9 +40,7 @@ jobs:
           command: |
             ls -halt
             ls -halt ./coverage
-            ./node_modules/.bin/jest --coverage --coverageReporters=text-lcov | coveralls
-            ./node_modules/.bin/jest --coverage --coverageReporters=text-lcov | codecov
-            # 'cat ./coverage/lcov.info | coveralls'
+            cat ./coverage/lcov.info | coveralls
             # 'cat ./coverage/lcov.info | codecov'
       - save_cache:
           key: v{{ .Environment.CIRCLE_BUILD_NUM }}-npm-lock-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_JOB }}-{{ checksum "package-lock.json" }}
