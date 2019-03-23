@@ -40,8 +40,8 @@ jobs:
           command: |
             ls -halt
             ls -halt ./coverage
-            jest --coverage --coverageReporters=text-lcov | coveralls
-            jest --coverage --coverageReporters=text-lcov | codecov
+            ./node_modules/.bin/jest --coverage --coverageReporters=text-lcov | coveralls
+            ./node_modules/.bin/jest --coverage --coverageReporters=text-lcov | codecov
             # 'cat ./coverage/lcov.info | coveralls'
             # 'cat ./coverage/lcov.info | codecov'
       - save_cache:
