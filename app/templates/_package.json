@@ -31,11 +31,11 @@
   "scripts": {
     "build": "tsc -p tsconfig.test.json",
     "clean": "rm -rf ./*.*js ./*.d.ts dist/",
-    "lint": "tslint --project tsconfig.json --config tslint.prod.json --format stylish 'src/**/*.ts*'",
-    "lint:debug": "tslint --project tsconfig.json --config tslint.json --format stylish 'src/**/*.ts*'",
+    "lint": "tslint --project tsconfig.json --config tslint.prod.json --format stylish",
+    "lint:debug": "tslint --project tsconfig.json --config tslint.json --format stylish",
     "prepublishOnly": "rm -rf dist/ && rollup -c ./rollup.config.js",
     "rollup": "rollup -c ./rollup.config.js",
-    "test": "npm run build && wct"
+    "test": "npm run lint && npm run build && wct"
   },
   "dependencies": {
     "lit-element": "^2.1.0",
