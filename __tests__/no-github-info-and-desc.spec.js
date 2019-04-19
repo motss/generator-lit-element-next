@@ -27,7 +27,6 @@ describe(`Github info and 'docDescription' are missing`, () => {
       '.gitattributes',
       '.gitignore',
       '.npmrc',
-      '.travis.yml',
 
       'CONTRIBUTORS',
       'LICENSE',

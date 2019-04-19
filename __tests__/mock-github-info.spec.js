@@ -47,7 +47,6 @@ describe(`mock Github info`, () => {
       '.gitattributes',
       '.gitignore',
       '.npmrc',
-      '.travis.yml',
 
       'CONTRIBUTORS',
       'LICENSE',

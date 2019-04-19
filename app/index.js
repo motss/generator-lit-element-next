@@ -107,7 +107,6 @@ module.exports = class extends Generator {
       '_.gitattributes',
       '_.gitignore',
       '_.npmrc',
-      '_.travis.yml',
       '_LICENSE',
       '_package.json',
       '_README.md',

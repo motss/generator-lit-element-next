@@ -24,7 +24,6 @@ describe('normal', () => {
       '.gitattributes',
       '.gitignore',
       '.npmrc',
-      '.travis.yml',
 
       'CONTRIBUTORS',
       'LICENSE',
