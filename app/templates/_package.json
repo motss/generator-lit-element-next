@@ -60,7 +60,7 @@
     "wct-mocha": "^1.0.0"
   },
   "engines": {
-    "node": ">= 10.15.1",
+    "node": ">= 8.16.0",
     "npm": ">= 6.4.1"
   },
   "publishConfig": {
