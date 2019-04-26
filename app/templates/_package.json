@@ -38,7 +38,7 @@
     "lint:debug": "tslint --project tsconfig.json --config tslint.json --format stylish",
     "prepublishOnly": "npm run clean && npm run rollup",
     "rollup": "rollup -c ./rollup.config.js",
-    "test": "npm run lint && npm ts && wct --skipt-selenium-install --config-file wct.config.json",
+    "test": "npm run lint && npm run ts && wct --skip-selenium-install --config-file wct.config.json",
     "ts": "tsc",
     "watch": "npm run clean && npm run ts -- --watch"
   },
