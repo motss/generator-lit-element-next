@@ -95,12 +95,12 @@ module.exports = class extends Generator {
       'src/test/index.html',
       'src/test/runner.html',
       'CONTRIBUTORS',
-      'tsconfig.test.json',
+      'tsconfig.prod.json',
       'tsconfig.json',
       'tslint.json',
       'tslint.prod.json',
       'rollup.config.js',
-      'wct.conf.json',
+      'wct.config.json',
     ];
     const TPLS = [
       '_.editorconfig',

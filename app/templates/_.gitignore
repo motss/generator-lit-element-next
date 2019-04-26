@@ -4,24 +4,17 @@
 .*cache
 .build/
 .DS_Store
-.nyc_output
 .tmp/
 .vscode
 *.env
+*.tsbuildinfo
 
 # debug
-*debug.log*
+*.log*
 
 # folders
 coverage*/
 dist*/
 node_modules/
 
-# .js files
-*.d.ts*
-*.js
-*.jsx
-*.mjs
-
 # Do not ignore
-!rollup.config.js

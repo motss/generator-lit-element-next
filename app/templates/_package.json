@@ -23,19 +23,24 @@
     "url": "<%= authorUrl %>"
   },
   "files": [
-    "dist"
+    "dist/*.d.ts.map",
+    "dist/*.d.ts",
+    "dist/*.js.map",
+    "dist/*.js"
   ],
   "main": "./dist/my-element.js",
   "module": "./dist/my-element.js",
   "typings": "./dist/my-element.d.ts",
   "scripts": {
-    "build": "tsc -p tsconfig.test.json",
-    "clean": "rm -rf ./*.*js ./*.d.ts dist/",
+    "build": "npm run clean && npm run lint && npm run ts -- -p tsconfig.prod.json",
+    "clean": "rm -rf dist/",
     "lint": "tslint --project tsconfig.json --config tslint.prod.json --format stylish",
     "lint:debug": "tslint --project tsconfig.json --config tslint.json --format stylish",
-    "prepublishOnly": "rm -rf dist/ && rollup -c ./rollup.config.js",
+    "prepublishOnly": "npm run clean && npm run rollup",
     "rollup": "rollup -c ./rollup.config.js",
-    "test": "npm run lint && npm run build && wct"
+    "test": "npm run lint && npm ts && wct --skipt-selenium-install --config-file wct.config.json",
+    "ts": "tsc",
+    "watch": "npm run clean && npm run ts -- --watch"
   },
   "dependencies": {
     "lit-element": "^2.1.0",
@@ -45,18 +50,17 @@
     "@messageflow/tslint-config": "^1.3.0",
     "@types/chai": "^4.1.7",
     "@types/mocha": "^5.2.6",
-    "rollup": "^1.9.0",
-    "rollup-plugin-filesize": "^6.0.1",
-    "rollup-plugin-minify-html-literals": "^1.2.2",
-    "rollup-plugin-node-resolve": "^4.2.0",
-    "rollup-plugin-terser": "^4.0.4",
-    "rollup-plugin-tslint": "^0.2.2",
-    "rollup-plugin-typescript2": "^0.20.1",
-    "@webcomponents/webcomponentsjs": "^2.2.7",
     "chai": "^4.2.0",
     "mocha": "^5.2.0",
-    "tslint": "^5.15.0",
-    "typescript": "^3.4.2",
+    "rollup": "^1.10.1",
+    "rollup-plugin-filesize": "^6.0.1",
+    "rollup-plugin-minify-html-literals": "^1.2.2",
+    "rollup-plugin-node-resolve": "^4.2.3",
+    "rollup-plugin-terser": "^4.0.4",
+    "rollup-plugin-tslint": "^0.2.2",
+    "rollup-plugin-typescript2": "^0.21.0",
+    "tslint": "^5.16.0",
+    "typescript": "^3.4.5",
     "wct-mocha": "^1.0.0"
   },
   "engines": {

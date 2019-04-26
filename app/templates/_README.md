@@ -9,7 +9,8 @@
 <!-- [![Follow me][follow-me-badge]][follow-me-url] -->
 
 [![Version][version-badge]][version-url]
-[![Built with lit-element][built-with-lit-element-badge]][built-with-lit-element-url]
+[![lit-element][lit-element-version-badge]][lit-element-url]
+[![Node version][node-version-badge]][node-version-url]
 [![MIT License][mit-license-badge]][mit-license-url]
 
 [![Downloads][downloads-badge]][downloads-url]
@@ -17,13 +18,12 @@
 [![Packagephobia][packagephobia-badge]][packagephobia-url]
 [![Bundlephobia][bundlephobia-badge]][bundlephobia-url]
 
-[![Build Status][travis-badge]][travis-url]
 [![Dependency Status][daviddm-badge]][daviddm-url]
-<!-- [![codecov][codecov-badge]][codecov-url] -->
-<!-- [![Coverage Status][coveralls-badge]][coveralls-url] -->
+<!-- [![CircleCI][circleci-badge]][circleci-url] -->
 
 [![codebeat badge][codebeat-badge]][codebeat-url]
 [![Codacy Badge][codacy-badge]][codacy-url]
+[![Language grade: JavaScript][lgtm-badge]][lgtm-url]
 [![Code of Conduct][coc-badge]][coc-url]
 
 > Better element for the web
@@ -112,6 +112,7 @@ class MainApp extends LitElement {
 [vscode-url]: https://code.visualstudio.com
 [vscode-lit-html-url]: https://github.com/mjbvz/vscode-lit-html
 [web-component-tester-url]: https://github.com/Polymer/tools/tree/master/packages/web-component-tester
+[lit-element-url]: https://github.com/Polymer/lit-element
 
 <!-- MDN -->
 [array-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
@@ -128,10 +129,9 @@ class MainApp extends LitElement {
 <!-- Badges -->
 <!-- [follow-me-badge]: https://flat.badgen.net/twitter/follow/<%= authorName %>?icon=twitter -->
 
-
-
 [version-badge]: https://flat.badgen.net/npm/v/<%= packageName %>?icon=npm
-[built-with-lit-element-badge]: https://flat.badgen.net/npm/v/lit-element/latest?icon=npm&label=lit-element
+[lit-element-version-badge]: https://flat.badgen.net/npm/v/lit-element/latest?icon=npm&label=lit-element
+[node-version-badge]: https://flat.badgen.net/npm/node/<%= packageName %>
 [mit-license-badge]: https://flat.badgen.net/npm/license/<%= packageName %>
 
 [downloads-badge]: https://flat.badgen.net/npm/dm/<%= packageName %>
@@ -139,33 +139,29 @@ class MainApp extends LitElement {
 [packagephobia-badge]: https://flat.badgen.net/packagephobia/install/<%= packageName %>
 [bundlephobia-badge]: https://flat.badgen.net/bundlephobia/minzip/<%= packageName %>
 
-[travis-badge]: https://flat.badgen.net/travis/<%= gitName %>/<%= packageName %>?icon=travis
-<!-- [circleci-badge]: https://flat.badgen.net/circleci/github/<%= gitName %>/<%= packageName %>?icon=circleci -->
 [daviddm-badge]: https://flat.badgen.net/david/dep/<%= gitName %>/<%= packageName %>
-<!-- [codecov-badge]: https://flat.badgen.net/codecov/c/github/<%= gitName %>/<%= packageName %>?label=codecov&icon=codecov -->
-<!-- [coveralls-badge]: https://flat.badgen.net/coveralls/c/github/<%= gitName %>/<%= packageName %>?label=coveralls -->
+<!-- [circleci-badge]: https://flat.badgen.net/circleci/github/<%= gitName %>/<%= packageName %>?icon=circleci -->
 
 [codebeat-badge]: https://codebeat.co/badges/123
 [codacy-badge]: https://api.codacy.com/project/badge/Grade/123
+[lgtm-badge]: https://flat.badgen.net/lgtm/grade/javascript/g/<%= gitName %>/<%= packageName %>?icon=lgtm
 [coc-badge]: https://flat.badgen.net/badge/code%20of/conduct/pink
 
 <!-- Links -->
 <!-- [follow-me-url]: https://twitter.com/<%= authorName %>?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=<%= packageName %> -->
 
 [version-url]: https://www.npmjs.com/package/<%= packageName %>
-[built-with-lit-element-url]: https://github.com/Polymer/lit-element
+[node-version-url]: https://nodejs.org/en/download
 [mit-license-url]: https://github.com/<%= gitName %>/<%= packageName %>/blob/master/LICENSE
 
 [downloads-url]: https://www.npmtrends.com/<%= packageName %>
 [packagephobia-url]: https://packagephobia.now.sh/result?p=<%= packageName %>
 [bundlephobia-url]: https://bundlephobia.com/result?p=<%= packageName %>
 
-[travis-url]: https://travis-ci.org/<%= gitName %>/<%= packageName %>
-<!-- [circleci-url]: https://circleci.com/gh/<%= gitName %>/<%= packageName %>/tree/master -->
+[circleci-url]: https://circleci.com/gh/<%= gitName %>/<%= packageName %>/tree/master
 [daviddm-url]: https://david-dm.org/<%= gitName %>/<%= packageName %>
-<!-- [codecov-url]: https://codecov.io/gh/<%= gitName %>/<%= packageName %> -->
-<!-- [coveralls-url]: https://coveralls.io/github/<%= gitName %>/<%= packageName %>?branch=master -->
 
-[codebeat-url]: https://codebeat.co/projects/github-com-<%= gitName %>-<%= packageName %>-master
-[codacy-url]: https://www.codacy.com/app/<%= gitName %>/<%= packageName %>?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=<%= gitName %>/<%= packageName %>&amp;utm_campaign=Badge_Grade
-[coc-url]: https://github.com/<%= gitName %>/<%= packageName %>/blob/master/CODE_OF_CONDUCT.md
+[codebeat-url]: https://codebeat.co/projects/<codebeat_path>
+[codacy-url]: https://www.codacy.com/app/<codacy_path>
+[lgtm-url]: https://lgtm.com/projects/g/<lgtm_path>
+[coc-url]: https://github.com/<%= gitName %>/<%= packageName %>/blob/master/code-of-conduct.md

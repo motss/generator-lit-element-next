@@ -9,8 +9,7 @@
       "browserOptions": {
         "chrome": [
           "disable-gpu",
-          "headless",
-          "window-size=1920,1080"
+          "headless"
         ],
         "firefox": [
           "-headless"
@@ -18,6 +17,8 @@
       }
     }
   },
-  "suites": [ "src/test" ],
-  "verbose": true
+  "suites": ["src/test"],
+  "verbose": true,
+  "expanded": true,
+  "compile": "auto"
 }

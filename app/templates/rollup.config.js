@@ -15,6 +15,7 @@ const rollup = {
   output: [{
     file: 'dist/my-element.js',
     format: 'esm',
+    sourcemap: true,
   }],
   plugins: [
     resolve(),

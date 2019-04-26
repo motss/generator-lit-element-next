@@ -52,14 +52,14 @@ describe(`mock Github info`, () => {
       'LICENSE',
       'README.md',
 
-      'tsconfig.test.json',
       'tsconfig.json',
+      'tsconfig.prod.json',
       'tslint.json',
       'tslint.prod.json',
 
       'package.json',
       'rollup.config.js',
-      'wct.conf.json',
+      'wct.config.json',
 
       'src/test/index.html',
       'src/test/runner.html',
