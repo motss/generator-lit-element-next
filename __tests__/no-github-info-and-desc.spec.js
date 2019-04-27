@@ -28,9 +28,8 @@ describe(`Github info and 'docDescription' are missing`, () => {
       '.gitignore',
       '.npmrc',
 
-      'CONTRIBUTORS',
-      'LICENSE',
-      'README.md',
+      'license',
+      'readme.md',
 
       'tsconfig.json',
       'tsconfig.prod.json',

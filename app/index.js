@@ -94,7 +94,6 @@ module.exports = class extends Generator {
       'src/test/test-helpers.ts',
       'src/test/index.html',
       'src/test/runner.html',
-      'CONTRIBUTORS',
       'tsconfig.prod.json',
       'tsconfig.json',
       'tslint.json',
@@ -107,9 +106,9 @@ module.exports = class extends Generator {
       '_.gitattributes',
       '_.gitignore',
       '_.npmrc',
-      '_LICENSE',
+      '_license',
       '_package.json',
-      '_README.md',
+      '_readme.md',
     ];
 
     NON_TPLS.map((n) => {

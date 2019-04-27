@@ -152,7 +152,7 @@ class MainApp extends LitElement {
 
 [version-url]: https://www.npmjs.com/package/<%= packageName %>
 [node-version-url]: https://nodejs.org/en/download
-[mit-license-url]: https://github.com/<%= gitName %>/<%= packageName %>/blob/master/LICENSE
+[mit-license-url]: https://github.com/<%= gitName %>/<%= packageName %>/blob/master/license
 
 [downloads-url]: https://www.npmtrends.com/<%= packageName %>
 [packagephobia-url]: https://packagephobia.now.sh/result?p=<%= packageName %>

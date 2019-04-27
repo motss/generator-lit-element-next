@@ -48,9 +48,8 @@ describe(`mock Github info`, () => {
       '.gitignore',
       '.npmrc',
 
-      'CONTRIBUTORS',
-      'LICENSE',
-      'README.md',
+      'license',
+      'readme.md',
 
       'tsconfig.json',
       'tsconfig.prod.json',

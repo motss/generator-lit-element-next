@@ -145,7 +145,7 @@ $ npx -p yo -p generator-lit-element-next -- yo lit-element-next
 
 [version-url]: https://www.npmjs.com/package/generator-lit-element-next
 [node-version-url]: https://nodejs.org/en/download
-[mit-license-url]: https://github.com/motss/generator-lit-element-next/blob/master/LICENSE
+[mit-license-url]: https://github.com/motss/generator-lit-element-next/blob/master/license
 
 [downloads-url]: https://www.npmtrends.com/generator-lit-element-next
 [packagephobia-url]: https://packagephobia.now.sh/result?p=generator-lit-element-next
@@ -157,4 +157,4 @@ $ npx -p yo -p generator-lit-element-next -- yo lit-element-next
 
 [codebeat-url]: https://codebeat.co/projects/github-com-motss-generator-lit-element-next-master
 [codacy-url]: https://www.codacy.com/app/motss/generator-lit-element-next?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=motss/generator-lit-element-next&amp;utm_campaign=Badge_Grade
-[coc-url]: https://github.com/motss/generator-lit-element-next/blob/master/CODE_OF_CONDUCT.md
+[coc-url]: https://github.com/motss/generator-lit-element-next/blob/master/code-of-conduct.md
