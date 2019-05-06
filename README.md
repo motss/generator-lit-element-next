@@ -147,7 +147,7 @@ $ npx -p yo -p generator-lit-element-next -- yo lit-element-next
 
 [version-url]: https://www.npmjs.com/package/generator-lit-element-next
 [node-version-url]: https://nodejs.org/en/download
-[mit-license-url]: https://github.com/motss/generator-lit-element-next/blob/master/license
+[mit-license-url]: https://github.com/motss/generator-lit-element-next/blob/master/LICENSE
 [awesome-url]: https://github.com/web-padawan/awesome-lit-html#starter-templates
 
 [downloads-url]: https://www.npmtrends.com/generator-lit-element-next
