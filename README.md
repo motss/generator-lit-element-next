@@ -13,6 +13,7 @@
 [![Version][version-badge]][version-url]
 [![Node version][node-version-badge]][node-version-url]
 [![MIT License][mit-license-badge]][mit-license-url]
+[![Mentioned in Awesome][awesome-badge]][awesome-url]
 
 [![Downloads][downloads-badge]][downloads-url]
 [![Total downloads][total-downloads-badge]][downloads-url]
@@ -125,6 +126,7 @@ $ npx -p yo -p generator-lit-element-next -- yo lit-element-next
 [version-badge]: https://flat.badgen.net/npm/v/generator-lit-element-next?icon=npm
 [node-version-badge]: https://flat.badgen.net/npm/node/generator-lit-element-next
 [mit-license-badge]: https://flat.badgen.net/npm/license/generator-lit-element-next
+[awesome-badge]: https://awesome.re/mentioned-badge.svg
 
 [downloads-badge]: https://flat.badgen.net/npm/dm/generator-lit-element-next
 [total-downloads-badge]: https://flat.badgen.net/npm/dt/generator-lit-element-next?label=total%20downloads
@@ -146,6 +148,7 @@ $ npx -p yo -p generator-lit-element-next -- yo lit-element-next
 [version-url]: https://www.npmjs.com/package/generator-lit-element-next
 [node-version-url]: https://nodejs.org/en/download
 [mit-license-url]: https://github.com/motss/generator-lit-element-next/blob/master/license
+[awesome-url]: https://github.com/web-padawan/awesome-lit-html#starter-templates
 
 [downloads-url]: https://www.npmtrends.com/generator-lit-element-next
 [packagephobia-url]: https://packagephobia.now.sh/result?p=generator-lit-element-next
