@@ -18,3 +18,4 @@ dist*/
 node_modules/
 
 # Do not ignore
+!rollup.config.js
