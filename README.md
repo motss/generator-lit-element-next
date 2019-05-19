@@ -28,7 +28,7 @@
 [![Codacy Badge][codacy-badge]][codacy-url]
 [![Code of Conduct][coc-badge]][coc-url]
 
-> Write your next custom element with latest [lit-element][lit-element-url] in [TypeScript][typescript-url] while [Rollup][rollup-url] takes care the rest for you in code compilation and bundling.
+> Write your next custom element with latest [lit-element][lit-element-url] in [TypeScript][typescript-url].
 
 ## Table of contents <!-- omit in toc -->
 
@@ -123,7 +123,6 @@ Please note that this project is released with a [Contributor Code of Conduct][c
 [typescript-url]: https://www.typescriptlang.org
 [yeoman-url]: https://yeoman.io
 [lit-element-url]: https://github.com/Polymer/lit-element
-[rollup-url]: https://github.com/rollup/rollup
 [web-component-tester-url]: https://github.com/Polymer/tools/tree/master/packages/web-component-tester
 [web-component-tester-section-url]: #web-component-tester
 
