@@ -1,6 +1,6 @@
 {
   "name": "generator-lit-element-next",
-  "version": "2.5.1",
+  "version": "2.6.0",
   "description": "Generator for developing your next custom element with latest LitElement in TypeScript",
   "keywords": [
     "generator",
