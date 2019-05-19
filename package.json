@@ -37,7 +37,7 @@
     "yosay": "^2.0.2"
   },
   "devDependencies": {
-    "jest": "^24.7.1",
+    "jest": "^24.8.0",
     "yeoman-assert": "^3.1.1",
     "yeoman-test": "^1.9.1"
   },
