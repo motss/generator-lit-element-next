@@ -39,6 +39,8 @@
     - [NPM](#npm)
     - [NPX](#npx)
 - [Getting To Know Yeoman](#getting-to-know-yeoman)
+- [Contributing](#contributing)
+  - [Code of Conduct](#code-of-conduct)
 - [License](#license)
 
 ## Setup
@@ -101,6 +103,12 @@ $ npx -p yo -p generator-lit-element-next -- yo lit-element-next
 - Yeoman can be too opinionated at times but is easily convinced not to be.
 - Feel free to [learn more about Yeoman][yeoman-url].
 
+## Contributing
+
+### Code of Conduct
+
+Please note that this project is released with a [Contributor Code of Conduct][coc-url]. By participating in this project you agree to abide by its terms.
+
 ## License
 
 [MIT License](https://motss.mit-license.org/) © Rong Sen Ng
@@ -147,7 +155,7 @@ $ npx -p yo -p generator-lit-element-next -- yo lit-element-next
 
 [version-url]: https://www.npmjs.com/package/generator-lit-element-next
 [node-version-url]: https://nodejs.org/en/download
-[mit-license-url]: https://github.com/motss/generator-lit-element-next/blob/master/LICENSE
+[mit-license-url]: /LICENSE
 [awesome-url]: https://github.com/web-padawan/awesome-lit-html#starter-templates
 
 [downloads-url]: https://www.npmtrends.com/generator-lit-element-next
@@ -160,4 +168,4 @@ $ npx -p yo -p generator-lit-element-next -- yo lit-element-next
 
 [codebeat-url]: https://codebeat.co/projects/github-com-motss-generator-lit-element-next-master
 [codacy-url]: https://www.codacy.com/app/motss/generator-lit-element-next?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=motss/generator-lit-element-next&amp;utm_campaign=Badge_Grade
-[coc-url]: https://github.com/motss/generator-lit-element-next/blob/master/code-of-conduct.md
+[coc-url]: /CODE-OF-CONDUCT.md

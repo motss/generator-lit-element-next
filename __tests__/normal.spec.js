@@ -25,8 +25,8 @@ describe('normal', () => {
       '.gitignore',
       '.npmrc',
 
-      'license',
-      'readme.md',
+      'LICENSE',
+      'README.md',
 
       'tsconfig.json',
       'tsconfig.prod.json',
@@ -34,7 +34,6 @@ describe('normal', () => {
       'tslint.prod.json',
 
       'package.json',
-      'rollup.config.js',
       'wct.config.json',
 
       'src/test/index.html',

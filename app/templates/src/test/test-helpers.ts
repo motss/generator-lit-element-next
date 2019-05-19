@@ -37,3 +37,5 @@ export const getShadowInnerHTML = (target: Element | HTMLElement) => {
   const root = (target.shadowRoot || target);
   return root.innerHTML && stripExpressionDelimiters(root.innerHTML!);
 };
+
+export const getTestName = (name: string) => `${name}${new URL(window.location.href).search}`;

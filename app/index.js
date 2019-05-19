@@ -98,7 +98,6 @@ module.exports = class extends Generator {
       'tsconfig.json',
       'tslint.json',
       'tslint.prod.json',
-      'rollup.config.js',
       'wct.config.json',
     ];
     const TPLS = [
@@ -106,9 +105,9 @@ module.exports = class extends Generator {
       '_.gitattributes',
       '_.gitignore',
       '_.npmrc',
-      '_license',
+      '_LICENSE',
       '_package.json',
-      '_readme.md',
+      '_README.md',
     ];
 
     NON_TPLS.map((n) => {

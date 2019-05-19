@@ -28,8 +28,8 @@ describe(`Github info and 'docDescription' are missing`, () => {
       '.gitignore',
       '.npmrc',
 
-      'license',
-      'readme.md',
+      'LICENSE',
+      'README.md',
 
       'tsconfig.json',
       'tsconfig.prod.json',
@@ -37,7 +37,6 @@ describe(`Github info and 'docDescription' are missing`, () => {
       'tslint.prod.json',
 
       'package.json',
-      'rollup.config.js',
       'wct.config.json',
 
       'src/test/index.html',

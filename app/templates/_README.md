@@ -35,6 +35,8 @@
 - [Usage](#usage)
   - [HTML (with native ES modules)](#html-with-native-es-modules)
   - [JS/ TS file (w/ native ES modules)](#js-ts-file-w-native-es-modules)
+- [Contributing](#contributing)
+  - [Code of Conduct](#code-of-conduct)
 - [License](#license)
 
 ## Pre-requisites
@@ -99,6 +101,12 @@ class MainApp extends LitElement {
 }
 ```
 
+## Contributing
+
+### Code of Conduct
+
+Please note that this project is released with a [Contributor Code of Conduct][coc-url]. By participating in this project you agree to abide by its terms.
+
 ## License
 
 [MIT License](https://<%= gitName %>.mit-license.org/) © <%= authorName %>
@@ -152,7 +160,7 @@ class MainApp extends LitElement {
 
 [version-url]: https://www.npmjs.com/package/<%= packageName %>
 [node-version-url]: https://nodejs.org/en/download
-[mit-license-url]: https://github.com/<%= gitName %>/<%= packageName %>/blob/master/license
+[mit-license-url]: /LICENSE
 
 [downloads-url]: https://www.npmtrends.com/<%= packageName %>
 [packagephobia-url]: https://packagephobia.now.sh/result?p=<%= packageName %>
@@ -164,4 +172,4 @@ class MainApp extends LitElement {
 [codebeat-url]: https://codebeat.co/projects/<codebeat_path>
 [codacy-url]: https://www.codacy.com/app/<codacy_path>
 [lgtm-url]: https://lgtm.com/projects/g/<lgtm_path>
-[coc-url]: https://github.com/<%= gitName %>/<%= packageName %>/blob/master/code-of-conduct.md
+[coc-url]: /CODE-OF-CONDUCT.md

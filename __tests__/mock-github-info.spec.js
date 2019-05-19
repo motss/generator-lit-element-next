@@ -48,8 +48,8 @@ describe(`mock Github info`, () => {
       '.gitignore',
       '.npmrc',
 
-      'license',
-      'readme.md',
+      'LICENSE',
+      'README.md',
 
       'tsconfig.json',
       'tsconfig.prod.json',
@@ -57,7 +57,6 @@ describe(`mock Github info`, () => {
       'tslint.prod.json',
 
       'package.json',
-      'rollup.config.js',
       'wct.config.json',
 
       'src/test/index.html',
