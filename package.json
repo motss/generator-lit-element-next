@@ -6,6 +6,7 @@
     "generator",
     "generator-lit-element-next",
     "lit-element",
+    "lit-html",
     "typescript",
     "yeoman",
     "yeoman-generator",
@@ -27,7 +28,7 @@
   ],
   "main": "./app/index",
   "scripts": {
-    "clean": "rm -rf ./*.*js ./*.d.ts dist/",
+    "clean": "shx rm -rf dist/ coverage/",
     "test": "jest --config ./.jestrc.json"
   },
   "dependencies": {
@@ -38,6 +39,7 @@
   },
   "devDependencies": {
     "jest": "^24.8.0",
+    "shx": "^0.3.2",
     "yeoman-assert": "^3.1.1",
     "yeoman-test": "^1.9.1"
   },
