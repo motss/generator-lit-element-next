@@ -1,5 +1,22 @@
+jest.mock('shelljs', () => {
+  return {
+    which: () => true,
+    exec: (cmd) => {
+      return {
+        stdout: cmd === 'git config --get user.email'
+          ? 'cashblack.gmail.com'
+          : 'Cash Black',
+      };
+    },
+  };
+});
+
+jest.mock('github-username', () => jest.fn().mockImplementation(() => {
+  return Promise.reject();
+}));
+
 jest.mock('gh-user', () => jest.fn().mockImplementation(() => {
-  return Promise.reject({});
+  return Promise.reject();
 }));
 
 const path = require('path');
