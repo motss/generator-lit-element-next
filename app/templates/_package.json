@@ -32,16 +32,16 @@
   "module": "./dist/my-element.js",
   "typings": "./dist/my-element.d.ts",
   "scripts": {
-    "build": "npm run clean && npm run ts -- -p tsconfig.prod.json",
+    "build": "npm run ts -- -p tsconfig.prod.json",
     "clean": "shx rm -rf dist/",
-    "lint": "tslint --project tsconfig.json --config tslint.prod.json --format stylish",
-    "lint:debug": "tslint --project tsconfig.json --config tslint.json --format stylish",
-    "prepublishOnly": "npm run build",
-    "test": "npm run clean && npm run lint && npm run ts && wct --config-file wct.config.json",
+    "lint": "npm run lint:debug -- --config tslint.prod.json",
+    "lint:debug": "tslint --project tsconfig.json --format stylish",
+    "prepublishOnly": "npm run lint && npm run build",
+    "test": "npm run lint && npm run ts && wct --config-file wct.config.json",
     "test:ci": "wct --config-file wct.config.ci.json",
     "test:sl": "wct --config-file wct.config.sl.json",
-    "ts": "tsc",
-    "watch": "npm run clean && npm run ts -- --watch"
+    "ts": "npm run clean && tsc",
+    "watch": "npm run ts -- --watch"
   },
   "dependencies": {
     "lit-element": "^2.1.0",
