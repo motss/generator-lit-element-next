@@ -1,34 +1,11 @@
-jest.mock('shelljs', () => {
-  return {
-    which: () => true,
-    exec: (cmd) => {
-      return {
-        stdout: cmd === 'git config --get user.email'
-          ? 'cashblack.gmail.com'
-          : 'Cash Black',
-      };
-    },
-  };
-});
+import path from 'path';
+import assert from 'yeoman-assert';
+import helpers from 'yeoman-test';
 
-jest.mock('github-username', () => jest.fn().mockImplementation(() => {
-  return Promise.resolve('cashblack');
-}));
-
-jest.mock('gh-user', () => jest.fn().mockImplementation(() => {
-  return Promise.resolve({
-    html_url: 'https://github.com/cashblack',
-  });
-}));
-
-const path = require('path');
-const assert = require('yeoman-assert');
-const helpers = require('yeoman-test');
-
-describe(`mock Github info`, () => {
+describe('normal', () => {
   beforeEach(() => {
     return helpers
-      .run(path.join(__dirname, '../app'))
+      .run(path.join(__dirname, '..'))
       .withPrompts({
         packageName: `${process.cwd().replace(/(?:.*\/)(.+)/i, '$1')}`,
         description: 'Yet another generator to disrupt the world',
@@ -68,4 +45,5 @@ describe(`mock Github info`, () => {
 
     assert.file(expected);
   });
+
 });

@@ -12,8 +12,15 @@
 *.log*
 
 # folders
+/test*/
 coverage*/
 dist*/
 node_modules/
+
+# compiled files
+/*.d.ts
+/*.d.ts.map
+/*.js
+/*.js.map
 
 # Do not ignore

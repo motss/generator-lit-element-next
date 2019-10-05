@@ -1,25 +1,30 @@
-const Generator = require('yeoman-generator');
-const chalk = require('chalk');
-const yosay = require('yosay');
-const ghUser = require('gh-user');
-const pkgJson = require('../package.json');
+import chalk from 'chalk';
+import ghUser from 'gh-user';
+import Generator from 'yeoman-generator';
+import yosay from 'yosay';
 
-module.exports = class extends Generator {
-  initializing() {
+// @ts-ignore
+import pkgJson from './package.json';
+
+export class Index extends Generator {
+  public user: any;
+  public props: any;
+
+  public initializing() {
     try {
       const ghTask = this.user.github.username()
-        .then(un => Promise.all([un, ghUser(un)]))
-        .then(([un, info]) => {
+        .then((un: string) => Promise.all([un, ghUser(un)]))
+        .then(([un, info]: [string, { html_url: string }]) => {
           return [un, info.html_url];
         })
         .catch(() => []);
 
-      return ghTask.then(([ username, homepage ]) => {
+      return ghTask.then(([username, homepage]: [string, string]) => {
         this.user.info = {
-          name: this.user.git.name(),
-          email: this.user.git.email(),
           username,
           homepage,
+          name: this.user.git.name(),
+          email: this.user.git.email(),
         };
       });
     } catch (_) {
@@ -32,7 +37,7 @@ module.exports = class extends Generator {
     }
   }
 
-  prompting() {
+  public prompting() {
     this.log(yosay(`Welcome to the stunning ${chalk.red(pkgJson.name)}!`));
 
     const fallbackDescription =
@@ -89,13 +94,13 @@ module.exports = class extends Generator {
 
     return this.prompt(prompts).then((props) => {
       this.props = Object.assign({}, props, {
-        docDescription: (props.description || fallbackDescription).replace(
+        docDescription: (props.description as string || fallbackDescription).replace(
           /typeScript/i, '[TypeScript][typescript-url]'),
       });
     });
   }
 
-  writing() {
+  public writing() {
     const NON_TPLS = [
       'src/my-element.ts',
       'src/test/my-element.spec.ts',
@@ -133,10 +138,13 @@ module.exports = class extends Generator {
     });
   }
 
-  install() {
+  public install() {
     this.installDependencies({
       bower: false,
       npm: true,
     });
   }
-};
+}
+
+export default Index;
+module.exports = Index;

@@ -1,7 +1,7 @@
 jest.mock('shelljs', () => {
   return {
     which: () => true,
-    exec: (cmd) => {
+    exec: (cmd: string) => {
       return {
         stdout: cmd === 'git config --get user.email'
           ? 'cashblack.gmail.com'
@@ -12,23 +12,26 @@ jest.mock('shelljs', () => {
 });
 
 jest.mock('github-username', () => jest.fn().mockImplementation(() => {
-  return Promise.reject();
+  return Promise.resolve('cashblack');
 }));
 
 jest.mock('gh-user', () => jest.fn().mockImplementation(() => {
-  return Promise.reject();
+  return Promise.resolve({
+    html_url: 'https://github.com/cashblack',
+  });
 }));
 
-const path = require('path');
-const assert = require('yeoman-assert');
-const helpers = require('yeoman-test');
+import path from 'path';
+import assert from 'yeoman-assert';
+import helpers from 'yeoman-test';
 
-describe(`Github info and 'docDescription' are missing`, () => {
+describe(`mock Github info`, () => {
   beforeEach(() => {
     return helpers
-      .run(path.join(__dirname, '../app'))
+      .run(path.join(__dirname, '..'))
       .withPrompts({
         packageName: `${process.cwd().replace(/(?:.*\/)(.+)/i, '$1')}`,
+        description: 'Yet another generator to disrupt the world',
         homepage: 'https://github.com/awesome-next',
         repoUrl: 'git@github.com:cashblack/awesome-next.git',
         authorName: 'Cash Black',

@@ -3,9 +3,8 @@
   "collectCoverage": true,
   "collectCoverageFrom": [
     "!**/node_modules/**",
-    "!**/src/demo/**/*.{js|jsx}",
     "!**/src/test*/**/*.{js|jsx}",
-    "<rootDir>/app/index.js"
+    "<rootDir>/index.js"
   ],
   "coverageDirectory": "./coverage",
   "coverageThreshold": {
@@ -18,7 +17,7 @@
   },
   "testEnvironment": "node",
   "testMatch": [
-    "<rootDir>/__tests__/**/*.spec.js?(x)"
+    "<rootDir>/test*/**/*.spec.js?(x)"
   ],
   "verbose": true
 }
