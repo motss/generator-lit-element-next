@@ -1,7 +1,7 @@
 {
   "extends": "@reallyland/tsconfig/browser",
   "compilerOptions": {
-    "rootDirs": ["src", "templates"],
+    "rootDirs": ["src"],
     "outDir": "app/",
     "declarationDir": "app/",
     "module": "commonjs"
