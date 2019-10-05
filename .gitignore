@@ -12,15 +12,15 @@
 *.log*
 
 # folders
-/test*/
+app/test*/
 coverage*/
 dist*/
 node_modules/
 
 # compiled files
-/*.d.ts
-/*.d.ts.map
-/*.js
-/*.js.map
+app/*.d.ts
+app/*.d.ts.map
+app/*.js
+app/*.js.map
 
 # Do not ignore

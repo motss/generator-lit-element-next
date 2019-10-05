@@ -1,10 +1,10 @@
+import { readFileSync } from 'fs';
+import path from 'path';
+
 import chalk from 'chalk';
 import ghUser from 'gh-user';
 import Generator from 'yeoman-generator';
 import yosay from 'yosay';
-
-// @ts-ignore
-import pkgJson from './package.json';
 
 export class Index extends Generator {
   public user: any;
@@ -38,6 +38,9 @@ export class Index extends Generator {
   }
 
   public prompting() {
+    const pkgJson: { name: string } = (
+      JSON.parse(readFileSync(path.resolve('../package.json'), 'utf8'))
+    );
     this.log(yosay(`Welcome to the stunning ${chalk.red(pkgJson.name)}!`));
 
     const fallbackDescription =

@@ -24,18 +24,14 @@
     "url": "https://github.com/motss"
   },
   "files": [
-    "index.js",
-    "index.d.ts",
-    "index.d.ts.map",
-    "index.js.map",
-    "templates"
+    "app"
   ],
   "main": "dist/index.js",
   "module": "dist/index.js",
   "scripts": {
     "build": "npm run clean && npm run lint && npm run ts -- -p ./tsconfig.json",
     "build:prod": "npm run clean && npm run lint:prod && npm run ts -- -p ./tsconfig.prod.json",
-    "clean": "shx rm -rf coverage/ tests/ index.js index.js.map index.d.ts index.d.ts.map",
+    "clean": "shx rm -rf coverage/ app/tests/ app/index.js app/index.js.map app/index.d.ts app/index.d.ts.map",
     "jest": "jest --config ./.jestrc.json",
     "lint": "tslint --project tsconfig.json",
     "lint:prod": "npm run lint -- --config tslint.prod.json --format stylish",
