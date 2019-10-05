@@ -26,8 +26,8 @@
   "files": [
     "app"
   ],
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "main": "app/index.js",
+  "module": "app/index.js",
   "scripts": {
     "build": "npm run clean && npm run lint && npm run ts -- -p ./tsconfig.json",
     "build:prod": "npm run clean && npm run lint:prod && npm run ts -- -p ./tsconfig.prod.json",
