@@ -1,6 +1,3 @@
-import { readFileSync } from 'fs';
-import path from 'path';
-
 import chalk from 'chalk';
 import ghUser from 'gh-user';
 import Generator from 'yeoman-generator';
@@ -9,6 +6,7 @@ import yosay from 'yosay';
 export class Index extends Generator {
   public user: any;
   public props: any;
+  public readonly packageName: string = 'generator-lit-element-next';
 
   public initializing() {
     try {
@@ -38,10 +36,7 @@ export class Index extends Generator {
   }
 
   public prompting() {
-    const pkgJson: { name: string } = (
-      JSON.parse(readFileSync(path.resolve('../package.json'), 'utf8'))
-    );
-    this.log(yosay(`Welcome to the stunning ${chalk.red(pkgJson.name)}!`));
+    this.log(yosay(`Welcome to the stunning ${chalk.red(this.packageName)}!`));
 
     const fallbackDescription =
       'A simple custom element written in TypeScript with LitElement';
