@@ -1,0 +1,6 @@
+{
+  "extends": [
+    "@reallyland/tslint-config"
+  ],
+  "rules": {}
+}
