@@ -39,7 +39,7 @@
     "jest": "jest --config ./.jestrc.json",
     "lint": "tslint --project tsconfig.json",
     "lint:prod": "npm run lint -- --config tslint.prod.json --format stylish",
-    "prepublish": "npm run build:prod",
+    "prepublishOnly": "npm run build:prod",
     "postpublish": "npm run clean",
     "test": "npm run build && npm run jest",
     "ts": "tsc"
