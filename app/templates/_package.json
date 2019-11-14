@@ -36,12 +36,18 @@
     "clean": "shx rm -rf dist/",
     "lint": "npm run lint:debug -- --config tslint.prod.json",
     "lint:debug": "tslint --project tsconfig.json --format stylish",
-    "prepublishOnly": "npm run lint && npm run build",
-    "test": "npm run lint && npm run ts && wct --config-file wct.config.json",
+    "prepublishOnly": "npm run clean && npm run lint && npm run build",
+    "test": "npm run clean && npm run lint && npm run ts && wct --config-file wct.config.json",
     "test:ci": "wct --config-file wct.config.ci.json",
     "test:sl": "wct --config-file wct.config.sl.json",
-    "ts": "npm run clean && tsc",
+    "ts": "tsc",
+    "upgrade": "npm outdated --dev && npm update --dev && npm audit fix",
     "watch": "npm run ts -- --watch"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run ts -- --noEmit && npm run clean"
+    }
   },
   "dependencies": {
     "lit-element": "^2.2.1",
@@ -49,15 +55,16 @@
     "tslib": "^1.10.0"
   },
   "devDependencies": {
-    "@reallyland/tsconfig": "^1.0.0",
+    "@reallyland/tsconfig": "^1.0.1",
     "@reallyland/tslint-config": "^1.1.1",
-    "@types/chai": "^4.2.1",
+    "@types/chai": "^4.2.5",
     "@types/mocha": "^5.2.7",
     "chai": "^4.2.0",
-    "mocha": "^6.2.0",
+    "husky": "^3.0.9",
+    "mocha": "^6.2.2",
     "shx": "^0.3.2",
-    "tslint": "^5.19.0",
-    "typescript": "^3.6.2",
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.2",
     "wct-mocha": "^1.0.1"
   },
   "engines": {
