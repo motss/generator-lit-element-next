@@ -41,6 +41,11 @@
     "ts": "tsc",
     "upgrade": "npm outdated --dev && npm update --dev && npm audit fix"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run ts -- --noEmit && npm run clean"
+    }
+  },
   "dependencies": {
     "chalk": "^3.0.0",
     "gh-user": "^4.0.0",
@@ -56,6 +61,7 @@
     "@types/yeoman-generator": "^3.1.4",
     "@types/yeoman-test": "^2.0.3",
     "@types/yosay": "0.0.29",
+    "husky": "^3.0.9",
     "jest": "^24.9.0",
     "shx": "^0.3.2",
     "tslint": "^5.20.1",
