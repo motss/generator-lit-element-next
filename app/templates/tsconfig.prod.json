@@ -1,4 +1,7 @@
 {
   "extends": "./tsconfig.json",
-  "exclude": ["src/test/**/*", "src/demo/**/*"]
+  "compilerOptions": {
+    "importHelpers": true
+  },
+  "include": ["src/*.ts"]
 }

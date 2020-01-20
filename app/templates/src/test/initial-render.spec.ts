@@ -1,7 +1,7 @@
 import { MyElement } from '../my-element.js';
 
 import '../my-element.js';
-import { getShadowInnerHTML, getTestName } from './test-helpers';
+import { getShadowInnerHTML, getTestName } from './test-helpers.js';
 
 const assert = chai.assert;
 const localName = 'my-element';

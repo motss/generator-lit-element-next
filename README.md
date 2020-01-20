@@ -49,8 +49,8 @@
 
 Please make sure that you have the following dependencies installed and setup correctly:-
 
-- [Node.js][nodejs-url] >= `8.16.0`
-- [NPM][npm-url] >= `6.4.1`
+- [Node.js][nodejs-url] >= `10.18.1`
+- [NPM][npm-url] >= `6.13.4`
 - [web-component-tester][web-component-tester-url] >= 6.9.2 (See [web-component-tester section][web-component-tester-section-url] for more details.)
 
 ### Installation
