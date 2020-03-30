@@ -49,25 +49,25 @@
   "dependencies": {
     "chalk": "^3.0.0",
     "gh-user": "^4.0.0",
-    "yeoman-generator": "^4.4.0",
+    "yeoman-generator": "^4.7.2",
     "yosay": "^2.0.2"
   },
   "devDependencies": {
-    "@reallyland/tsconfig": "^1.0.1",
+    "@reallyland/tsconfig": "^2.0.0",
     "@reallyland/tslint-config": "^1.1.1",
-    "@types/jest": "^24.9.0",
-    "@types/node": "^13.1.8",
+    "@types/jest": "^24.9.1",
+    "@types/node": "^13.9.5",
     "@types/yeoman-assert": "^3.1.1",
     "@types/yeoman-generator": "^3.1.4",
     "@types/yeoman-test": "^2.0.3",
     "@types/yosay": "0.0.29",
-    "husky": "^4.0.10",
+    "husky": "^4.2.3",
     "jest": "^24.9.0",
     "shx": "^0.3.2",
-    "tslint": "^5.20.1",
-    "typescript": "^3.7.5",
+    "tslint": "^6.1.0",
+    "typescript": "^3.8.3",
     "yeoman-assert": "^3.1.1",
-    "yeoman-test": "^2.1.0"
+    "yeoman-test": "^2.3.0"
   },
   "engines": {
     "node": ">= 10.18.1",
