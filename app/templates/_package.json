@@ -9,6 +9,7 @@
     "lit-html",
     "polymer",
     "typescript",
+    "web-component",
     "web-components"
   ],
   "homepage": "<%= homepage %>",
@@ -32,40 +33,33 @@
   "module": "./dist/my-element.js",
   "typings": "./dist/my-element.d.ts",
   "scripts": {
-    "build": "npm run ts -- -p tsconfig.prod.json",
-    "clean": "shx rm -rf dist/",
+    "build": "tsc -p tsconfig.prod.json",
+    "clean": "shx rm -rf dist/ .*cache *.log",
     "lint": "npm run lint:debug -- --config tslint.prod.json",
     "lint:debug": "tslint --project tsconfig.json --format stylish",
     "prepublishOnly": "npm run clean && npm run lint && npm run build",
-    "test": "npm run clean && npm run lint && npm run ts && wct --config-file wct.config.json",
-    "test:ci": "wct --config-file wct.config.ci.json",
-    "test:sl": "wct --config-file wct.config.sl.json",
+    "test": "npm run clean && npm run lint && npm run ts",
     "ts": "tsc",
     "upgrade": "npm outdated --dev && npm update --dev && npm audit fix",
-    "watch": "npm run ts -- --watch"
+    "watch": "tsc --watch"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint && npm run ts -- --noEmit && npm run clean"
+      "pre-commit": "npm run lint && tsc --noEmit"
     }
   },
   "dependencies": {
-    "lit-element": "^2.2.1",
-    "lit-html": "^1.1.2",
-    "tslib": "^1.10.0"
+    "lit-element": "^2.3.1",
+    "lit-html": "^1.2.1",
+    "tslib": "^1.11.1"
   },
   "devDependencies": {
-    "@reallyland/tsconfig": "^1.0.1",
+    "@reallyland/tsconfig": "^2.0.0",
     "@reallyland/tslint-config": "^1.1.1",
-    "@types/chai": "^4.2.7",
-    "@types/mocha": "^5.2.7",
-    "chai": "^4.2.0",
-    "husky": "^4.0.10",
-    "mocha": "^7.0.0",
+    "husky": "^4.2.3",
     "shx": "^0.3.2",
-    "tslint": "^5.20.1",
-    "typescript": "^3.7.5",
-    "wct-mocha": "^1.0.1"
+    "tslint": "^6.1.0",
+    "typescript": "^3.8.3"
   },
   "engines": {
     "node": ">= 10.18.1",

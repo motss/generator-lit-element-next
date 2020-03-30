@@ -32,38 +32,26 @@
 
 ## Table of contents <!-- omit in toc -->
 
-- [Setup](#setup)
-  - [Pre-requisites](#pre-requisites)
-  - [Installation](#installation)
-    - [web-component-tester](#web-component-tester)
-    - [NPM](#npm)
-    - [NPX](#npx)
+- [Pre-requisites](#pre-requisites)
+- [Installation](#installation)
+  - [NPM](#npm)
+  - [NPX](#npx)
+- [Testing](#testing)
 - [Getting To Know Yeoman](#getting-to-know-yeoman)
 - [Contributing](#contributing)
   - [Code of Conduct](#code-of-conduct)
 - [License](#license)
 
-## Setup
-
-### Pre-requisites
+## Pre-requisites
 
 Please make sure that you have the following dependencies installed and setup correctly:-
 
 - [Node.js][nodejs-url] >= `10.18.1`
 - [NPM][npm-url] >= `6.13.4`
-- [web-component-tester][web-component-tester-url] >= 6.9.2 (See [web-component-tester section][web-component-tester-section-url] for more details.)
 
-### Installation
+## Installation
 
-#### web-component-tester
-
-For running tests, it's recommended to install globally on your system due to its insanely huge install size by running:
-
-```sh
-$ npm i -g web-component-tester
-```
-
-#### NPM
+### NPM
 
 First, install `generator-lit-element-next` using [NPM][npm-url] (we assume you have pre-installed [Node.js][nodejs-url]).
 
@@ -83,7 +71,7 @@ $ mkdir my-app && cd my-app
 $ yo lit-element-next
 ```
 
-#### NPX
+### NPX
 
 [NPX][npx-url] comes in a package as of [Node.js][nodejs-url] `v8.9.0`. This means that you can run any CLI written in [Node.js][nodejs-url] without globally installing it.
 
@@ -95,6 +83,14 @@ $ mkdir my-app && cd my-app
 # Install packages with NPX and execute the CLI with this one-liner
 $ npx -p yo -p generator-lit-element-next -- yo lit-element-next
 ```
+
+## Testing
+
+No option on which testing library/ framework to use to test Web Components and you are feel free to bring your own testing library or framework. But, here are a few to recommend if you haven't already had one:
+
+1. [@open-wc/testing]
+2. [webdriverio]
+3. [playwright]
 
 ## Getting To Know Yeoman
 
@@ -123,8 +119,9 @@ Please note that this project is released with a [Contributor Code of Conduct][c
 [typescript-url]: https://www.typescriptlang.org
 [yeoman-url]: https://yeoman.io
 [lit-element-url]: https://github.com/Polymer/lit-element
-[web-component-tester-url]: https://github.com/Polymer/tools/tree/master/packages/web-component-tester
-[web-component-tester-section-url]: #web-component-tester
+[@open-wc/testing]: https://github.com/open-wc/open-wc/tree/master/packages/testing
+[webdriverio]: https://github.com/webdriverio/webdriverio
+[playwright]: https://github.com/microsoft/playwright
 
 <!-- Badges -->
 [tippin-me-badge]: https://badgen.net/badge/%E2%9A%A1%EF%B8%8Ftippin.me/@igarshmyb/F0918E
