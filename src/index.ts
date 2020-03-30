@@ -101,15 +101,10 @@ export class Index extends Generator {
   public writing() {
     const NON_TPLS = [
       'src/my-element.ts',
-      'src/test/my-element.spec.ts',
-      'src/test/test-helpers.ts',
-      'src/test/index.html',
-      'src/test/runner.html',
       'tsconfig.prod.json',
       'tsconfig.json',
       'tslint.json',
       'tslint.prod.json',
-      'wct.config.json',
     ];
     const TPLS = [
       '_.editorconfig',
