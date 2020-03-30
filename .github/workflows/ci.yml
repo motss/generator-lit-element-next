@@ -46,8 +46,9 @@ jobs:
       - name: List versions
         if: "env.CI_SKIP == 'false'"
         continue-on-error: true
+        shell: bash
         run: |
-          node -v && npm version && npx shx which npm && pwd && npx -p cross-env -p envinfo -- cross-env ENVINFO_DEBUG=trace envinfo
+          node -v && npm version && which npm && pwd && envinfo
 
       - name: Install dependencies
         if: "env.CI_SKIP == 'false'"
