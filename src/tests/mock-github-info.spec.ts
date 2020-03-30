@@ -57,11 +57,6 @@ describe(`mock Github info`, () => {
       'tslint.prod.json',
 
       'package.json',
-      'wct.config.json',
-
-      'src/test/index.html',
-      'src/test/runner.html',
-      'src/test/my-element.spec.ts',
 
       'src/my-element.ts',
     ];
