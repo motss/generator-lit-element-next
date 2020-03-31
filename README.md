@@ -19,7 +19,7 @@
 [![Total downloads][total-downloads-badge]][downloads-url]
 [![Packagephobia][packagephobia-badge]][packagephobia-url]
 
-[![CircleCI][circleci-badge]][circleci-url]
+[![ci][ga-badge]][ga-url]
 [![Dependency Status][daviddm-badge]][daviddm-url]
 [![codecov][codecov-badge]][codecov-url]
 [![Coverage Status][coveralls-badge]][coveralls-url]
@@ -136,7 +136,7 @@ Please note that this project is released with a [Contributor Code of Conduct][c
 [total-downloads-badge]: https://flat.badgen.net/npm/dt/generator-lit-element-next?label=total%20downloads
 [packagephobia-badge]: https://flat.badgen.net/packagephobia/install/generator-lit-element-next
 
-[circleci-badge]: https://flat.badgen.net/circleci/github/motss/generator-lit-element-next?icon=circleci
+[ga-badge]: https://github.com/motss/generator-lit-element-next/workflows/ci/badge.svg
 [daviddm-badge]: https://flat.badgen.net/david/dep/motss/generator-lit-element-next
 [codecov-badge]: https://flat.badgen.net/codecov/c/github/motss/generator-lit-element-next?label=codecov&icon=codecov
 [coveralls-badge]: https://flat.badgen.net/coveralls/c/github/motss/generator-lit-element-next?label=coveralls
@@ -157,7 +157,7 @@ Please note that this project is released with a [Contributor Code of Conduct][c
 [downloads-url]: https://www.npmtrends.com/generator-lit-element-next
 [packagephobia-url]: https://packagephobia.now.sh/result?p=generator-lit-element-next
 
-[circleci-url]: https://circleci.com/gh/motss/generator-lit-element-next/tree/master
+[ga-url]: https://github.com/motss/generator-lit-element-next/actions?query=workflow%3Aci
 [daviddm-url]: https://david-dm.org/motss/generator-lit-element-next
 [coveralls-url]: https://coveralls.io/github/motss/generator-lit-element-next?branch=master
 [codecov-url]: https://codecov.io/gh/motss/generator-lit-element-next
